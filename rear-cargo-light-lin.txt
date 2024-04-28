@@ -1,0 +1,42 @@
+ 
+55 80 02 7d 00  
+55 80 96 e8 00 
+# Lights on and door open
+55 80 06 79 00 ... repeats 49 times
+55 80 36 49 00  0x36
+55 80 36 49 00  0x36
+55 80 66 19 00  0x66
+55 80 66 19 00  0x66
+55 80 86 f8 00  0x86
+55 80 86 f8 00  0x86 
+lights turned on
+55 80 96 e8 00 ... repeats indefinitely
+
+
+After locking vehicle and the lights dim off
+55 80 06 79 00 State change
+55 80 06 79 00 State change
+55 80 02 7d 00 ... repeats indefinitely, lights off
+
+opening door
+55 80 06 79 00  state change
+55 80 06 79 00  state change
+55 80 46 39 00  0x46
+55 80 46 39 00  0x46
+55 80 66 19 00  0x66
+55 80 66 19 00  0x66
+55 80 96 e8 00  
+lights on
+55 80 96 e8 00 ... repeats indefinitely
+
+0011 0010: 
+Lights off
+0000 0110:
+sent many times during init and sent two times when lights dim off and when door opens. State change?
+0100 0110:
+sent two times after init
+0110 0110: 
+sent two times after init and door open
+1000 0110:
+Sent two times a
+1001 0110

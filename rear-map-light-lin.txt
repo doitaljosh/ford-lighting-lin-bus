@@ -1,0 +1,45 @@
+Rear map light LIN bus messages:
+
+While opening door:
+
+...
+00 55 80 02 7d
+00 55 80 02 7d
+opened door
+00 55 80 16 69
+00 55 80 16 69
+00 55 80 66 19
+00 55 80 66 19
+00 55 80 a6 d8
+00 55 80 a6 d8
+00 55 80 c6 b8 ... repeats indefinitely, lights on
+
+While closing door and waiting for lights to automatically shut off
+
+00 55 80 06 79
+00 55 80 06 79
+00 55 80 06 79
+00 55 80 06 79
+closed door
+00 55 80 56 29
+00 55 80 56 29
+00 55 80 96 e8
+00 55 80 96 e8
+00 55 80 c6 b8 ... repeats 54 times
+lights dimming off
+00 55 80 06 79
+00 55 80 06 79
+00 55 80 02 7d ... repeats indefinitely, lights off
+
+When connecting battery:
+
+starting from no power
+00 55 80 01 7e
+00 55 80 01 7e
+00 55 80 16 69
+00 55 80 16 69
+00 55 80 66 19
+00 55 80 66 19
+00 55 80 a6 d8
+00 55 80 a6 d8
+00 55 80 c6 b8 ... repeats indefinitely, lights on
