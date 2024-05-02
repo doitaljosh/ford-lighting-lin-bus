@@ -1,0 +1,63 @@
+Ambient Light Messages
+
+Ice Blue:
+55 37 F0 14 88 00 FF 57 00 00 E3 00 
+55 80 10 41 0F 1F 00 
+ 
+Orange:
+55 80 00 45 0F 2B 00 
+55 37 F1 14 88 00 FF 57 00 00 E2 00 
+55 80 10 45 0F 1B 00 
+
+Blue:
+55 37 F2 14 88 00 FF 57 00 00 E1 00 
+55 80 00 49 0F 27 00 
+55 37 F2 14 88 00 FF 57 00 00 E1 00 
+55 80 10 49 0F 17 00 
+
+Red:
+55 80 00 4D 0F 23 00 
+55 37 F3 14 88 00 FF 57 00 00 E0 00 
+55 80 10 4D 0F 13 00 
+
+Green:
+55 37 F4 14 88 00 FF 57 00 00 DF 00 
+55 80 00 51 0F 1F 00 
+55 37 F4 14 88 00 FF 57 00 00 DF 00 
+55 80 10 51 0F 0F 00 
+
+Navy:
+55 80 00 55 0F 1B 00 
+55 37 F5 14 88 00 FF 57 00 00 DE 00 
+55 80 10 55 0F 0B 00 
+
+Purple:
+55 37 F6 14 88 00 FF 57 00 00 DD 00 
+55 80 00 59 0F 17 00 
+55 37 F6 14 88 00 FF 57 00 00 DD 00 
+55 80 10 59 0F 07 00 
+
+Message decoding:
+
+Set color:
+
+- PID: 0x37
+
+- Length: 8
+
+- Data bytes:
+Byte 0: Color
+0xF0: Ice
+0xF1: Orange
+0xF2: Blue
+0xF3: Red
+0xF4: Green
+0xF5: Navy
+0xF6: Purple
+Byte 1: 0x14, 00010100
+Byte 2: 0x88, 10001000
+Byte 3: 0x00
+Byte 4: Brightness, 00-FF
+Byte 5: 0x57 or 0x49, 01010111 or 0x01001001
+Byte 6: 0x00
+Byte 7: 0x00
